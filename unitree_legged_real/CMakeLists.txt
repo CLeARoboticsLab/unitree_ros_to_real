@@ -43,6 +43,10 @@ add_executable(ros_udp src/exe/ros_udp.cpp)
 target_link_libraries(ros_udp ${EXTRA_LIBS} ${catkin_LIBRARIES})
 add_dependencies(ros_udp ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_executable(ros_udp_low_fast src/exe/ros_udp_low_fast.cpp)
+target_link_libraries(ros_udp_low_fast ${EXTRA_LIBS} ${catkin_LIBRARIES})
+add_dependencies(ros_udp_low_fast ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(control_via_keyboard src/exe/control_via_keyboard.cpp)
 target_link_libraries(control_via_keyboard ${EXTRA_LIBS} ${catkin_LIBRARIES})
 add_dependencies(control_via_keyboard ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

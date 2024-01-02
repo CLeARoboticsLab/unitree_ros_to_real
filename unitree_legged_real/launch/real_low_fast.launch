@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="unitree_legged_real" type="ros_udp_low_fast" name="node_ros_udp_low_fast" output="screen" />
+</launch>
