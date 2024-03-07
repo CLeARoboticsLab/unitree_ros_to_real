@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 
     ros::NodeHandle nh;
 
-    sub_low = nh.subscribe("low_cmd", 100, lowCmdCallback);
+    sub_low = nh.subscribe("low_cmd", 100, lowCmdCallback, ros::TransportHints().tcpNoDelay(true));
     pub_low = nh.advertise<unitree_legged_msgs::LowState>("low_state", 1);
 
     LoopFunc loop_udpSend("low_udp_send", 0.002, 3, boost::bind(&Custom::lowUdpSend, &custom));
